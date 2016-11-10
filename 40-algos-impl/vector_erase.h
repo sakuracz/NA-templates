@@ -9,7 +9,7 @@ vector_erase(data, 1);
 REQUIRE((data == std::vector<int>{ 2, 3, 3, 2 })); */
 
 template<typename C>
-void vector_erase(C& cont, typename C::value_type toDrop){
+void vector_erase(C& cont, const typename C::value_type& toDrop){
 
         cont.erase(std::remove(cont.begin(), cont.end(), toDrop ), cont.end());
 
