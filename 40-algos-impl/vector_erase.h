@@ -1,6 +1,5 @@
 #pragma once
 #include <algorithm>
-#include <vector>
 
 // define vector_erase here
 /*std::vector<int> data{ 1, 2, 3, 1, 3, 1, 2 };
