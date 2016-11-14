@@ -20,13 +20,12 @@ template<typename T, typename = void>
 struct has_member_variable : std::false_type {};
 
 template<typename T>
-struct has_member_variable
-    <T, void_t<
-        typename std::enable_if<
-            std::is_same<
-                int,
-                decltype(std::declval<T>().member)
-            >::value
-        >::type
-    >> : std::true_type{};
+struct has_member_variable<T, void_t<
+    typename std::enable_if<
+        std::is_same<
+            int,
+            decltype(std::declval<T>().member)
+        >::value
+    >::type
+>> : std::true_type{};
 
